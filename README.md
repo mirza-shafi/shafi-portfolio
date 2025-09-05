@@ -1,7 +1,5 @@
 # Mirza Md. Shafi Uddin - Personal Portfolio
 
-![Portfolio Banner](./public/images/shafi.jpg)
-
 A modern and responsive personal portfolio website designed to showcase my skills, projects, and professional experience as a Computer Science student and aspiring software developer. This project was built from the ground up using React and Vite, focusing on a clean UI, smooth animations, and a component-based architecture.
 
 ###  live Demo
