@@ -13,7 +13,7 @@ const About = () => {
 />
 
         <div className="about-text fade-in">
-          <p>I'm a passionate Computer Science student at BRAC University with a strong foundation in software development and emerging technologies. Currently maintaining a CGPA of 3.20/4.0, I'm dedicated to creating innovative solutions and contributing to the tech community.</p>
+          <p>I'm a passionate Computer Science student at BRAC University with a strong foundation in software development and emerging technologies. I'm dedicated to creating innovative solutions and contributing to the tech community.</p>
           <p>My journey in technology spans web development, artificial intelligence, and cybersecurity awareness. I believe in the power of gamification to make learning more engaging and effective.</p>
           
           <div className="contact-info">

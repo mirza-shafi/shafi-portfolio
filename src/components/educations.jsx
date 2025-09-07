@@ -13,7 +13,7 @@ const Education = () => {
             <h4>BRAC University</h4>
             <div className="education-meta">
               <span className="date-badge">June 2021 - Present</span>
-              <span className="gpa-badge">CGPA: 3.20 / 4.0</span>
+              {/* <span className="gpa-badge">CGPA: 3.20 / 4.0</span> */}
             </div>
             
           </div>
@@ -25,7 +25,7 @@ const Education = () => {
             <h4>Ispahani Public School and College</h4>
             <div className="education-meta">
               <span className="date-badge">2017 - 2019</span>
-              <span className="gpa-badge">GPA: 4.67 / 5.0</span>
+              {/* <span className="gpa-badge">GPA: 4.67 / 5.0</span> */}
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ const Education = () => {
             <h4>Rampur High School</h4>
             <div className="education-meta">
               <span className="date-badge">2012 - 2016</span>
-              <span className="gpa-badge">GPA: 4.91 / 5.0</span>
+              {/* <span className="gpa-badge">GPA: 4.91 / 5.0</span> */}
             </div>
            
           </div>
