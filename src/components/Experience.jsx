@@ -10,7 +10,7 @@ const Experience = () => {
           <div className="timeline-content">
             <h3>Software Developer Intern</h3>
             <h4>BitEncryptIT</h4>
-            <p><strong>May 2025 - Present</strong></p>
+            <p><strong>May 2025 - July 2025</strong></p>
             <p>Working on cutting-edge software development projects, contributing to innovative solutions and gaining hands-on experience in professional software development practices.</p>
           </div>
           <div className="timeline-dot"></div>
