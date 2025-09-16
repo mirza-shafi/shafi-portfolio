@@ -1088,3 +1088,34 @@ body {
         gap: 1rem;
     }
 }
+
+.cv-download-btn {
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  padding: 8px 16px; /* Slightly more padding */
+  margin: 20px 0; /* Adjust margin as needed */
+  background-color: #4c474d; /* A modern, deep purple or your preferred accent color */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+  font-size: 1em; /* Slightly larger text */
+  font-weight: 600; /* Bolder text */
+  text-decoration: none;
+  border-radius: 50px; /* Highly rounded corners for a pill shape */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+  letter-spacing: 0.5px; /* A bit of letter spacing */
+}
+
+.cv-download-btn:hover {
+  background-color: #8e24aa; /* Lighter shade on hover */
+  transform: translateY(-3px); /* More pronounced lift effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.cv-download-btn:active {
+  transform: translateY(0); /* "Press down" effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Smaller shadow when active */
+}
