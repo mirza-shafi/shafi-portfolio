@@ -16,7 +16,7 @@ const Projects = () => {
           <div className="project-links">
             {/* Replace with actual GitHub URL when available */}
             <a href="https://github.com/yourusername/exile-prince" target="_blank" rel="noopener noreferrer" className="project-btn">Source Code</a>
-            <a href="https://exile-prince-demo.netlify.app" target="_blank" rel="noopener noreferrer" className="project-btn">Live Demo</a>
+            <a href="https://exile-prince.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-btn">Live Demo</a>
           </div>
         </div>
 
