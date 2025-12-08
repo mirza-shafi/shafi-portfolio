@@ -5,41 +5,32 @@ const Experience = () => {
 
   const jobs = [
     {
-      company: "Tech Solutions Inc.",
-      role: "AI Engineer",
-      date: "Jan 2023 - Present",
+      company: "X Integrated Marketing",
+      role: "Junior Engagement Officer",
+      date: "June 2024 – October 2024",
       points: [
-        "Developed and deployed LLM-based chatbots reducing customer support tickets by 40%.",
-        "Collaborated with cross-functional teams to integrate AI models into existing web platforms.",
-        "Optimized inference time for computer vision models using TensorRT."
+        "Assisted in planning and executing digital marketing campaigns to increase audience engagement.",
+        "Coordinated with creative and technical teams to ensure smooth campaign delivery.",
+        "Improved customer interactions through strategic communication and feedback loops."
       ]
     },
     {
-      company: "StartUp Lab",
-      role: "Junior Developer",
-      date: "Jun 2021 - Dec 2022",
+      company: "Robotics Club of BRACU",
+      role: "Secretary (IT Department)",
+      date: "Feb 2024 – June 2025",
       points: [
-        "Built responsive front-end interfaces using React and Tailwind CSS.",
-        "Assisted in backend API development using Node.js and Express.",
-        "Participated in code reviews and agile sprint planning."
-      ]
-    },
-    {
-      company: "University Research",
-      role: "Research Assistant",
-      date: "Jan 2020 - May 2021",
-      points: [
-        "Conducted data analysis on large datasets using Pandas and NumPy.",
-        "Published a paper on 'Optimizing Neural Networks for Edge Devices'.",
-        "Mentored junior students in Python programming basics."
+        "Managed IT operations and provided technical support for workshops, events, and robotics competitions.",
+        "Led digital initiatives and contributed to robotics projects, including an Arduino-based soccer robot.",
+        "Achieved competition success through effective team coordination and technical problem-solving."
       ]
     }
   ];
 
   return (
-    <section id="experience" className="section">
-      <h2 className="section-title">Where I've Worked</h2>
-      <div className="experience-container">
+    <section id="experience" className="section-container">
+      <h2 className="section-title">Where I've <span className="text-highlight">Worked</span></h2>
+      
+      <div className="experience-tabs-wrapper">
         <div className="tabs-list">
           {jobs.map((job, index) => (
             <button
