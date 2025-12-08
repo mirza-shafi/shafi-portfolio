@@ -9,8 +9,7 @@ const Hero = () => {
         <div className="profile-card fade-in">
           <div className="profile-header">
             <div className="img-container">
-              {/* Replace with your actual image path */}
-              <img src="/public/images/shafi-formal.png" alt="Profile" className="profile-img" />
+              <img src="https://via.placeholder.com/150" alt="Profile" className="profile-img" />
             </div>
             <h2 className="profile-name">Mirza Shafi</h2>
             <p className="profile-role">AI Engineer</p>

@@ -282,7 +282,30 @@ nav {
 .stat-item h3 { font-size: 32px; color: white; margin: 0; }
 .stat-item p { color: var(--text-gray); font-size: 14px; margin: 5px 0 0; }
 
-/* --- ABOUT SECTION REDESIGN --- */
+/* --- SHARED SECTION STYLES --- */
+.section-container {
+    padding: 100px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.text-highlight {
+    color: #38bdf8;
+}
+
+/* --- ABOUT SECTION --- */
 .about-redesign-section {
     padding: 100px 0;
     max-width: 1000px;
@@ -320,10 +343,6 @@ nav {
     font-weight: 700;
     color: var(--text-white);
     margin-bottom: 20px;
-}
-
-.text-highlight {
-    color: #38bdf8;
 }
 
 .about-subtitle {
@@ -370,7 +389,6 @@ nav {
     font-weight: 600;
 }
 
-/* Toggle Bar */
 .toggle-bar-container {
     display: flex;
     justify-content: center;
@@ -410,31 +428,204 @@ nav {
     color: white;
 }
 
-/* --- PROJECTS SECTION --- */
-.section {
-    padding: 100px 0;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 90%;
+/* --- EXPERIENCE SECTION (Tabs) --- */
+.experience-tabs-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
 }
 
-.section-title {
-    font-size: 32px;
+.tabs-list {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--card-border);
+    min-width: 180px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    border-left: 2px solid transparent;
+    color: var(--slate);
+    padding: 15px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    transition: all 0.25s;
+    margin-left: -2px;
+}
+
+.tab-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--primary-blue);
+}
+
+.tab-btn.active {
+    color: var(--primary-blue);
+    border-left-color: var(--primary-blue);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.job-content {
+    flex: 1;
+}
+
+.job-content h3 {
+    font-size: 20px;
     color: var(--text-white);
-    margin-bottom: 40px;
+    margin-bottom: 5px;
+}
+
+.company-name {
+    color: var(--primary-blue);
+}
+
+.job-date {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.job-points {
+    list-style: none;
+}
+
+.job-points li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+.job-points li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+}
+
+/* --- SKILLS SECTION (Cards) --- */
+.skills-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.skill-card {
+    background-color: var(--navy);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+}
+
+.skill-header {
     display: flex;
     align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 15px;
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background: var(--card-border);
-    margin-left: 20px;
+.skill-icon {
+    font-size: 24px;
 }
 
+.skill-header h3 {
+    font-size: 18px;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-pill {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-blue);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+}
+
+/* --- EDUCATION SECTION --- */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.edu-card-modern {
+    background: var(--navy);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.edu-card-modern:hover {
+    border-color: var(--primary-blue);
+}
+
+.edu-icon {
+    font-size: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.edu-info h3 {
+    color: var(--text-white);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.institution {
+    color: var(--primary-blue);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.year {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.grade {
+    color: var(--slate);
+    font-size: 14px;
+}
+
+/* --- PROJECTS SECTION --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -488,389 +679,7 @@ nav {
     margin-right: 15px;
 }
 
-/* --- FOOTER --- */
-footer {
-    padding: 20px;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--slate);
-    margin-top: 50px;
-}
-
-/* --- EXPERIENCE TABS STYLES --- */
-.experience-tabs-wrapper {
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    width: 100%;
-    max-width: 800px;
-}
-
-.tabs-list {
-    display: flex;
-    flex-direction: column;
-    border-left: 2px solid var(--card-border);
-    min-width: 160px;
-}
-
-.tab-btn {
-    background: transparent;
-    border: none;
-    border-left: 2px solid transparent;
-    color: var(--slate);
-    padding: 15px 20px;
-    text-align: left;
-    cursor: pointer;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    transition: all 0.25s;
-    margin-left: -2px; /* Align with border */
-}
-
-.tab-btn:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--primary-blue);
-}
-
-.tab-btn.active {
-    color: var(--primary-blue);
-    border-left-color: var(--primary-blue);
-    background-color: rgba(59, 130, 246, 0.05);
-}
-
-.job-content {
-    flex: 1;
-}
-
-.job-content h3 {
-    font-size: 20px;
-    color: var(--text-white);
-    margin-bottom: 5px;
-}
-
-.company-name {
-    color: var(--primary-blue);
-}
-
-.job-date {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--text-gray);
-    margin-bottom: 20px;
-}
-
-.job-points {
-    list-style: none;
-}
-
-.job-points li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: var(--slate);
-    line-height: 1.6;
-}
-
-.job-points li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: var(--primary-blue);
-}
-
-/* Mobile Responsive for Tabs */
-@media (max-width: 600px) {
-    .experience-tabs-wrapper {
-        flex-direction: column;
-    }
-    .tabs-list {
-        flex-direction: row;
-        border-left: none;
-        border-bottom: 2px solid var(--card-border);
-        overflow-x: auto;
-        margin-bottom: 20px;
-    }
-    .tab-btn {
-        border-left: none;
-        border-bottom: 2px solid transparent;
-        margin-left: 0;
-        margin-bottom: -2px;
-        white-space: nowrap;
-    }
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 1024px) {
-    .hero-main { flex-direction: column; text-align: center; }
-    .profile-card { width: 100%; max-width: 400px; }
-    .hero-title { font-size: 42px; }
-    .cta-group { justify-content: center; }
-    .mini-cards { justify-content: center; flex-wrap: wrap; }
-    .stats-bar { flex-wrap: wrap; gap: 20px; }
-}
-
-@media (max-width: 768px) {
-    nav { padding: 0 20px; }
-    .nav-links { display: none; } /* Hide nav links on mobile for now */
-    
-    .card-grid { grid-template-columns: 1fr; }
-    .about-card { padding: 25px; }
-    
-    .toggle-bar { width: 100%; justify-content: space-between; overflow-x: auto; }
-    .toggle-btn { padding: 10px 16px; font-size: 12px; }
-}
-
-/* =========================================
-   MISSING STYLES FOR EXPERIENCE, SKILLS, EDUCATION
-   (Paste this at the bottom of index.css)
-   ========================================= */
-
-/* --- SHARED LAYOUT --- */
-.section-container {
-    padding: 100px 0;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.text-highlight {
-    color: #38bdf8; /* Light Blue */
-}
-
-/* --- EXPERIENCE SECTION (Tabs) --- */
-.experience-tabs-wrapper {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 800px;
-}
-
-.tabs-list {
-    display: flex;
-    flex-direction: column;
-    border-left: 2px solid #1f2937;
-    min-width: 180px;
-}
-
-.tab-btn {
-    background: transparent;
-    border: none;
-    border-left: 2px solid transparent;
-    color: #8892b0; /* Slate */
-    padding: 15px 20px;
-    text-align: left;
-    cursor: pointer;
-    font-family: 'Fira Code', monospace;
-    font-size: 13px;
-    transition: all 0.25s;
-    margin-left: -2px;
-}
-
-.tab-btn:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #3b82f6;
-}
-
-.tab-btn.active {
-    color: #3b82f6;
-    border-left-color: #3b82f6;
-    background-color: rgba(59, 130, 246, 0.1);
-}
-
-.job-content {
-    flex: 1;
-}
-
-.job-content h3 {
-    font-size: 20px;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.company-name {
-    color: #3b82f6;
-}
-
-.job-date {
-    font-family: 'Fira Code', monospace;
-    font-size: 13px;
-    color: #9ca3af;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.job-points {
-    list-style: none;
-}
-
-.job-points li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #8892b0;
-    line-height: 1.6;
-}
-
-.job-points li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: #3b82f6;
-}
-
-/* --- SKILLS SECTION (Cards) --- */
-.skills-grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    width: 100%;
-}
-
-.skill-card {
-    background-color: #112240; /* Navy */
-    border: 1px solid #1f2937;
-    border-radius: 16px;
-    padding: 30px;
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6;
-}
-
-.skill-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #1f2937;
-    padding-bottom: 15px;
-}
-
-.skill-icon {
-    font-size: 24px;
-}
-
-.skill-header h3 {
-    font-size: 18px;
-    color: #ffffff;
-    margin: 0;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill-pill {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-family: 'Fira Code', monospace;
-}
-
-/* --- EDUCATION SECTION (Modern Cards) --- */
-.education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    width: 100%;
-}
-
-.edu-card-modern {
-    background: #112240;
-    border: 1px solid #1f2937;
-    border-radius: 16px;
-    padding: 30px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    transition: all 0.3s ease;
-}
-
-.edu-card-modern:hover {
-    border-color: #3b82f6;
-}
-
-.edu-icon {
-    font-size: 32px;
-    background: rgba(255, 255, 255, 0.05);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
-
-.edu-info h3 {
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.institution {
-    color: #3b82f6;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.year {
-    font-family: 'Fira Code', monospace;
-    font-size: 13px;
-    color: #9ca3af;
-    margin-bottom: 10px;
-}
-
-.grade {
-    color: #8892b0;
-    font-size: 14px;
-}
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 768px) {
-    .experience-tabs-wrapper {
-        flex-direction: column;
-    }
-    .tabs-list {
-        flex-direction: row;
-        border-left: none;
-        border-bottom: 2px solid #1f2937;
-        overflow-x: auto;
-        margin-bottom: 20px;
-    }
-    .tab-btn {
-        border-left: none;
-        border-bottom: 2px solid transparent;
-        margin-left: 0;
-        white-space: nowrap;
-    }
-}
-
-/* =========================================
-   CONTACT SECTION REDESIGN
-   ========================================= */
-
+/* --- CONTACT SECTION --- */
 .contact-section {
     padding: 100px 0;
     max-width: 1000px;
@@ -908,7 +717,6 @@ footer {
     gap: 30px;
 }
 
-/* --- Top Grid (Social & Availability) --- */
 .contact-top-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -916,7 +724,7 @@ footer {
 }
 
 .contact-card {
-    background-color: #0a0a0a; /* Very dark bg */
+    background-color: #0a0a0a;
     border: 1px solid #1f2937;
     border-radius: 16px;
     padding: 30px;
@@ -924,7 +732,6 @@ footer {
     flex-direction: column;
 }
 
-/* Blue Glow Effect for Left Card */
 .social-card-glow {
     border: 1px solid rgba(59, 130, 246, 0.3);
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
@@ -940,20 +747,17 @@ footer {
     gap: 10px;
 }
 
-.icon-blue {
-    color: #3b82f6;
-}
+.icon-blue { color: #3b82f6; }
 
 .status-dot {
     width: 10px;
     height: 10px;
-    background-color: #22c55e; /* Green */
+    background-color: #22c55e;
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
 }
 
-/* Social Grid Buttons */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -987,11 +791,6 @@ footer {
     margin-bottom: 10px;
 }
 
-.social-icon {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
 .social-name {
     color: #ffffff;
     font-size: 12px;
@@ -1004,7 +803,6 @@ footer {
     font-size: 11px;
 }
 
-/* Availability Card Content */
 .project-text {
     color: #9ca3af;
     font-size: 14px;
@@ -1043,10 +841,7 @@ footer {
     border-color: #3b82f6;
 }
 
-/* --- FAQ Section --- */
-.faq-card {
-    background-color: #0a0a0a;
-}
+.faq-card { background-color: #0a0a0a; }
 
 .faq-content {
     display: flex;
@@ -1066,9 +861,43 @@ footer {
     line-height: 1.6;
 }
 
-/* Responsive */
+/* --- FOOTER --- */
+footer {
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--slate);
+    margin-top: 50px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .hero-main { flex-direction: column; text-align: center; }
+    .profile-card { width: 100%; max-width: 400px; }
+    .hero-title { font-size: 42px; }
+    .cta-group { justify-content: center; }
+    .mini-cards { justify-content: center; flex-wrap: wrap; }
+    .stats-bar { flex-wrap: wrap; gap: 20px; }
+}
+
 @media (max-width: 768px) {
-    .contact-top-grid {
-        grid-template-columns: 1fr;
-    }
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    
+    .card-grid { grid-template-columns: 1fr; }
+    .about-card { padding: 25px; }
+    
+    .toggle-bar { width: 100%; justify-content: space-between; overflow-x: auto; }
+    .toggle-btn { padding: 10px 15px; white-space: nowrap; }
+
+    .experience-tabs-wrapper { flex-direction: column; }
+    .tabs-list { flex-direction: row; border-left: none; border-bottom: 2px solid var(--card-border); overflow-x: auto; margin-bottom: 20px; }
+    .tab-btn { border-left: none; border-bottom: 2px solid transparent; margin-left: 0; white-space: nowrap; }
+    .tab-btn.active { border-bottom-color: var(--primary-blue); }
+    
+    .edu-card-modern { flex-direction: column; }
+
+    .contact-top-grid { grid-template-columns: 1fr; }
+    .social-grid { grid-template-columns: repeat(2, 1fr); }
 }
