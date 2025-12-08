@@ -19,6 +19,7 @@ const Projects = () => {
             <a href="https://exile-prince.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-btn">Live Demo</a>
           </div>
         </div>
+        
 
         <div className="project-card fade-in">
           <div className="project-header">🏥</div>

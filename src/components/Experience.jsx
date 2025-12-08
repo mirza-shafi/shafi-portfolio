@@ -1,37 +1,68 @@
-// src/components/Experience.jsx
-import React from 'react';
+import React, { useState } from 'react';
 
 const Experience = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const jobs = [
+    {
+      company: "Tech Solutions Inc.",
+      role: "AI Engineer",
+      date: "Jan 2023 - Present",
+      points: [
+        "Developed and deployed LLM-based chatbots reducing customer support tickets by 40%.",
+        "Collaborated with cross-functional teams to integrate AI models into existing web platforms.",
+        "Optimized inference time for computer vision models using TensorRT."
+      ]
+    },
+    {
+      company: "StartUp Lab",
+      role: "Junior Developer",
+      date: "Jun 2021 - Dec 2022",
+      points: [
+        "Built responsive front-end interfaces using React and Tailwind CSS.",
+        "Assisted in backend API development using Node.js and Express.",
+        "Participated in code reviews and agile sprint planning."
+      ]
+    },
+    {
+      company: "University Research",
+      role: "Research Assistant",
+      date: "Jan 2020 - May 2021",
+      points: [
+        "Conducted data analysis on large datasets using Pandas and NumPy.",
+        "Published a paper on 'Optimizing Neural Networks for Edge Devices'.",
+        "Mentored junior students in Python programming basics."
+      ]
+    }
+  ];
+
   return (
-    <section id="experience" className="section experience">
-      <h2 className="section-title fade-in">Work Experience</h2>
-      <div className="timeline">
-        <div className="timeline-item fade-in">
-          <div className="timeline-content">
-            <h3>Software Developer Intern</h3>
-            <h4>BitEncryptIT</h4>
-            <p><strong>May 2025 - July 2025</strong></p>
-            <p>Working on cutting-edge software development projects, contributing to innovative solutions and gaining hands-on experience in professional software development practices.</p>
-          </div>
-          <div className="timeline-dot"></div>
+    <section id="experience" className="section">
+      <h2 className="section-title">Where I've Worked</h2>
+      <div className="experience-container">
+        <div className="tabs-list">
+          {jobs.map((job, index) => (
+            <button
+              key={index}
+              className={`tab-btn ${activeTab === index ? 'active' : ''}`}
+              onClick={() => setActiveTab(index)}
+            >
+              {job.company}
+            </button>
+          ))}
         </div>
-        <div className="timeline-item fade-in">
-          <div className="timeline-content">
-            <h3>Secretary, Department of IT</h3>
-            <h4>Robotics Club of BRAC University</h4>
-            <p><strong>Feb 2024 - Jun 2025</strong></p>
-            <p>Led IT initiatives for the robotics club, managed technical resources, and coordinated technology-related activities and competitions within the university community.</p>
-          </div>
-          <div className="timeline-dot"></div>
-        </div>
-        <div className="timeline-item fade-in">
-          <div className="timeline-content">
-            <h3>Junior Engagement Officer</h3>
-            <h4>X – Integrated Marketing Agency</h4>
-            <p><strong>Jun 2024 - Oct 2024</strong></p>
-            <p>Managed client relationships and engagement strategies, contributing to successful marketing campaigns and building valuable experience in digital marketing and client communications.</p>
-          </div>
-          <div className="timeline-dot"></div>
+        
+        <div className="job-content">
+          <h3>
+            <span>{jobs[activeTab].role}</span>
+            <span className="company-name"> @ {jobs[activeTab].company}</span>
+          </h3>
+          <p className="job-date">{jobs[activeTab].date}</p>
+          <ul className="job-points">
+            {jobs[activeTab].points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

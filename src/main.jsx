@@ -1,8 +1,7 @@
-// src/main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css' // Make sure you import your CSS here
+import './index.css' // <--- CRITICAL: This imports your styles
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

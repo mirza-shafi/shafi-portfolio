@@ -1,56 +1,30 @@
-// src/components/About.jsx
 import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="section about">
-      <h2 className="section-title fade-in">About Me</h2>
+    <section id="about" className="section">
+      <h2 className="section-title">About Me</h2>
       <div className="about-content">
-        <img 
-          src="../images/shafi-formal.png" 
-          // alt="Mirza Md. Shafi Uddin" 
-          className="about-image" 
-        />
-
-        <div className="about-text fade-in">
-          <p>I'm a passionate Computer Science student at BRAC University with a strong foundation in software development and emerging technologies. I'm dedicated to creating innovative solutions and contributing to the tech community.</p>
-          <p>My journey in technology spans web development, artificial intelligence, and cybersecurity awareness. I believe in the power of gamification to make learning more engaging and effective.</p>
-          
-          {/* === ADD THIS BUTTON === */}
-          <a 
-            href="../images/cv.pdf" 
-            download="MIRZA MD. SHAFI UDDIN_CV.pdf"
-            className="cv-download-btn fade-in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download CV
-          </a>
-          {/* ======================= */}
-
-          <div className="contact-info">
-            <div className="contact-item fade-in">
-              <span>📍</span>
-              <div>
-                <strong>Location</strong><br />
-                DIT Project, Merul Badda, Dhaka
-              </div>
-            </div>
-            <div className="contact-item fade-in">
-              <span>📧</span>
-              <div>
-                <strong>Email</strong><br />
-                <a href="mailto:mirza.md.shafi.uddin@gmail.com">mirza.md.shafi.uddin@gmail.com</a>
-              </div>
-            </div>
-            <div className="contact-item fade-in">
-              <span>📱</span>
-              <div>
-                <strong>Phone</strong><br />
-                +8801938820835
-              </div>
-            </div>
-          </div>
+        <div className="about-text">
+          <p>
+            Hello! My name is Mirza and I enjoy creating things that live on the internet. My interest in AI and web development started back in university when I decided to build a chatbot — turns out teaching a computer to talk taught me a lot about logic and linguistics!
+          </p>
+          <p>
+            Fast-forward to today, and I've had the privilege of working at an <span style={{color: 'var(--green)'}}>AI startup</span>, a <span style={{color: 'var(--green)'}}>tech consultancy</span>, and leading student research groups. My main focus these days is building accessible, inclusive AI products and digital experiences.
+          </p>
+          <p>Here are a few technologies I've been working with recently:</p>
+          <ul className="skills-list">
+            <li>Python (PyTorch)</li>
+            <li>TensorFlow</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>AWS / Azure</li>
+            <li>Docker & K8s</li>
+          </ul>
+        </div>
+        <div className="about-img-wrapper">
+          {/* Replace with your actual image */}
+          <img src="https://via.placeholder.com/300" alt="Mirza Shafi" className="about-img" />
         </div>
       </div>
     </section>

@@ -1,25 +1,16 @@
-// src/components/Navbar.jsx
 import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <div className="logo">MIRZA SHAFI</div>
-        <div className="mobile-menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-        </ul>
-      </div>
+    <nav>
+      <div className="nav-logo">MS</div>
+      <ul className="nav-links">
+        <li><a href="#about"><span>01.</span>About</a></li>
+        <li><a href="#experience"><span>02.</span>Experience</a></li>
+        <li><a href="#projects"><span>03.</span>Work</a></li>
+        <li><a href="#contact"><span>04.</span>Contact</a></li>
+        <li><a href="/resume.pdf" className="btn-small" style={{border: '1px solid var(--green)', padding: '8px 16px', borderRadius: '4px', color: 'var(--green)'}}>Resume</a></li>
+      </ul>
     </nav>
   );
 };
