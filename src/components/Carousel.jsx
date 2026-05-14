@@ -18,7 +18,7 @@ const projects = [
     tags: ["MERN", "Socket.io", "AI", "MongoDB"],
     image: "/images/project_hospital.png",
     githubUrl: "https://github.com/mirza-shafi/Hospital_Management_Portal",
-    demoUrl: "#"
+    demoUrl: "https://hmp.mirzashafi.com/"
   },
   {
     id: 3,
