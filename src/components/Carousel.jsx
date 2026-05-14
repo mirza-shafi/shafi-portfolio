@@ -49,8 +49,8 @@ const projects = [
   },
   ,{
     id: 6,
-    title: "ERP Inventory API",
-    description: "FastAPI-based RESTful API for managing customer orders, stock levels, and simulating full ERP sales workflows.",
+    title: "demo demo demo dmeo ",
+    description: "dmeo vai.",
     tags: ["Python", "FastAPI", "REST", "ERP"],
     image: "/images/project_erp.png",
     githubUrl: "https://github.com/mirza-shafi/Order-Processing-API-ERP-Module-",
