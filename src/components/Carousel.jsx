@@ -48,7 +48,7 @@ const projects = [
     demoUrl: "https://erp-inventory-api-production.up.railway.app/"
   },
   ,{
-    id: ,
+    id: 6,
     title: "ERP Inventory API",
     description: "FastAPI-based RESTful API for managing customer orders, stock levels, and simulating full ERP sales workflows.",
     tags: ["Python", "FastAPI", "REST", "ERP"],
