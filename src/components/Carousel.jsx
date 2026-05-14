@@ -9,7 +9,7 @@ const projects = [
     tags: ["AI", "RAG", "LangChain", "FastAPI"],
     image: "/images/project_askmydocs.png",
     githubUrl: "https://github.com/mirza-shafi/AskMyDocs",
-    demoUrl: "#"
+    demoUrl: "https://askmydocs.mirzashafi.com/"
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const projects = [
     tags: ["TypeScript", "React", "Node.js", "MongoDB"],
     image: "/images/project_taskflow.png",
     githubUrl: "https://github.com/mirza-shafi/TaskFlow",
-    demoUrl: "https://task-flow-shafi.vercel.app/"
+    demoUrl: "https://task-flow.mirzashafi.com/"
   },
   {
     id: 5,
