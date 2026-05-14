@@ -36,7 +36,7 @@ const projects = [
     tags: ["TypeScript", "React", "Node.js", "MongoDB"],
     image: "/images/project_taskflow.png",
     githubUrl: "https://github.com/mirza-shafi/TaskFlow",
-    demoUrl: "#"
+    demoUrl: "https://task-flow-shafi.vercel.app/"
   },
   {
     id: 5,
