@@ -47,18 +47,18 @@ const About = () => {
         </div>
       </div>
 
-      {/* Bottom Toggle Bar (Visual Only) */}
+      {/* Bottom Toggle Bar (Navigation) */}
       <div className="toggle-bar-container">
         <div className="toggle-bar">
-          <button className="toggle-btn">
+          <a href="#skills" className="toggle-btn" style={{textDecoration: 'none'}}>
             <span className="icon">⚙️</span> Skills
-          </button>
-          <button className="toggle-btn active">
-            <span className="icon">◎</span> Services
-          </button>
-          <button className="toggle-btn">
+          </a>
+          <a href="#projects" className="toggle-btn" style={{textDecoration: 'none'}}>
+            <span className="icon">◎</span> Projects
+          </a>
+          <a href="#experience" className="toggle-btn" style={{textDecoration: 'none'}}>
             <span className="icon">🏆</span> Experience
-          </button>
+          </a>
         </div>
       </div>
 

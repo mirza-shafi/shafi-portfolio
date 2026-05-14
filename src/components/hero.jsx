@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
 
           <div className="profile-actions">
-            <button className="icon-btn">{'</>'}</button>
-            <button className="icon-btn">↗</button>
+            <a href="https://github.com/mirza-shafi" target="_blank" rel="noreferrer" className="icon-btn" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}}>{'</>'}</a>
+            <a href="https://linkedin.com/in/mirza-shafi" target="_blank" rel="noreferrer" className="icon-btn" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}}>↗</a>
           </div>
         </div>
 
