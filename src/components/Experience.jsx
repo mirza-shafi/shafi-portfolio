@@ -5,23 +5,31 @@ const Experience = () => {
 
   const jobs = [
     {
-      company: "X Integrated Marketing",
+      company: "Mevrik",
+      role: "AI Agent & LLM Intern",
+      date: "Dec 2025 – Feb 2026",
+      points: [
+        "Autonomous Agents: Engineered and deployed AI agents to automate CX workflows, implementing stateful logic and tool-calling to reduce manual intervention.",
+        "LLM Optimization: Refined prompt architectures and conversational memory, increasing model accuracy and response grounding by measurable margins.",
+        "SaaS Integration: Integrated Gemini capabilities into a production SaaS environment using FastAPI and Webhooks for real-time AI processing."
+      ]
+    },
+    {
+      company: "X Integrated Marketing Agency",
       role: "Junior Engagement Officer",
       date: "June 2024 – October 2024",
       points: [
         "Assisted in planning and executing digital marketing campaigns to increase audience engagement.",
-        "Coordinated with creative and technical teams to ensure smooth campaign delivery.",
-        "Improved customer interactions through strategic communication and feedback loops."
+        "Coordinated with creative and technical teams to ensure smooth campaign delivery and improved customer interactions."
       ]
     },
     {
-      company: "Robotics Club of BRACU",
+      company: "Robotics Club of BRAC University",
       role: "Secretary (IT Department)",
       date: "Feb 2024 – June 2025",
       points: [
         "Managed IT operations and provided technical support for workshops, events, and robotics competitions.",
-        "Led digital initiatives and contributed to robotics projects, including an Arduino-based soccer robot.",
-        "Achieved competition success through effective team coordination and technical problem-solving."
+        "Led digital initiatives and contributed to robotics projects, including an Arduino-based soccer robot."
       ]
     }
   ];

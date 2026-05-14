@@ -13,35 +13,35 @@ const About = () => {
           Get to <span className="text-highlight">Know Me</span>
         </h2>
         <p className="about-subtitle">
-          I’m a passionate AI Engineer with 2+ years of experience transforming businesses through intelligent solutions. Let’s explore my journey and expertise.
+          I’m a passionate AI Engineer and Full-Stack Developer with hands-on experience in Large Language Models (LLMs), AI agent development, and building scalable intelligent solutions. Let’s explore my journey and expertise.
         </p>
       </div>
 
       {/* Main Content Card */}
       <div className="about-card">
         <h3 className="card-title">
-          <span className="rocket-icon">🚀</span> AI Innovation Leader
+          <span className="rocket-icon">🚀</span> AI & Data Science Enthusiast
         </h3>
         
         <div className="card-grid">
           {/* Column 1 */}
           <div className="card-column">
             <p>
-              <span className="text-blue-bold">Transforming businesses through AI excellence.</span> As an AI/ML Engineer at Brain Station 23, I specialize in building intelligent systems that drive real growth and innovation.
+              <span className="text-blue-bold">Transforming businesses through AI excellence.</span> With roles such as an AI Agent & LLM Intern at Mevrik, I specialize in building intelligent systems, deploying SaaS products, and developing scalable applications.
             </p>
           </div>
 
           {/* Column 2 */}
           <div className="card-column">
             <p>
-              My expertise in <strong>LangChain, AutoGen</strong>, and cutting-edge <strong>AI frameworks</strong> enables me to create sophisticated agent workflows and RAG systems that solve complex business challenges.
+              My expertise includes <strong>Retrieval-Augmented Generation (RAG)</strong>, <strong>AI Agents</strong>, and utilizing advanced <strong>Vector Data ecosystems</strong> to create sophisticated workflows that solve complex business challenges.
             </p>
           </div>
 
           {/* Column 3 */}
           <div className="card-column">
             <p>
-              As an <span className="text-blue-bold">AI Instructor & Consultant</span>, I empower teams to harness AI’s potential, ensuring sustainable growth through practical, client-centered solutions.
+              By leveraging cutting-edge tools and my ongoing knowledge from the <span className="text-blue-bold">Ostad AI Engineering Bootcamp</span>, I aim to ensure reliable, hallucination-free, and practical client-centered AI solutions.
             </p>
           </div>
         </div>

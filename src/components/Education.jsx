@@ -10,10 +10,10 @@ const Education = () => {
         <div className="edu-card-modern">
           <div className="edu-icon">🎓</div>
           <div className="edu-info">
-            <h3>Bachelor of Science in Computer Science</h3>
+            <h3>B.Sc. in Computer Science</h3>
             <p className="institution">BRAC University</p>
-            <p className="year">2018 - 2022</p>
-            <p className="grade">CGPA: 3.8/4.0</p>
+            <p className="year">June 2021 - October 2025</p>
+            <p className="grade">CGPA: 3.22 / 4.00</p>
           </div>
         </div>
         
@@ -21,10 +21,21 @@ const Education = () => {
         <div className="edu-card-modern">
           <div className="edu-icon">🏫</div>
           <div className="edu-info">
-            <h3>Higher Secondary Certificate</h3>
-            <p className="institution">Dhaka City College</p>
-            <p className="year">2016 - 2018</p>
-            <p className="grade">Science Group</p>
+            <h3>Higher Secondary Certificate (HSC)</h3>
+            <p className="institution">Ispahani Public School & College</p>
+            <p className="year">2019</p>
+            <p className="grade">GPA: 4.67 / 5.00</p>
+          </div>
+        </div>
+
+        {/* School */}
+        <div className="edu-card-modern">
+          <div className="edu-icon">🏫</div>
+          <div className="edu-info">
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p className="institution">Rampur High School</p>
+            <p className="year">2017</p>
+            <p className="grade">GPA: 4.91 / 5.00</p>
           </div>
         </div>
       </div>

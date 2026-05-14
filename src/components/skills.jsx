@@ -3,24 +3,29 @@ import React from 'react';
 const Skills = () => {
   const categories = [
     {
-      title: "Languages & Core",
-      icon: "💻",
-      skills: ["Python", "JavaScript (ES6+)", "C++", "SQL", "HTML/CSS"]
-    },
-    {
-      title: "AI & Data Science",
+      title: "AI & LLM Engineering",
       icon: "🧠",
-      skills: ["PyTorch", "TensorFlow", "Pandas", "NumPy", "OpenCV", "Scikit-learn"]
+      skills: ["LLM Integration", "AI Agents", "Prompt Engineering", "RAG Pipelines", "SLM Benchmarking"]
     },
     {
-      title: "Web Development",
-      icon: "🌐",
-      skills: ["React.js", "Node.js", "Express", "Tailwind CSS", "MongoDB"]
-    },
-    {
-      title: "Tools & Platforms",
+      title: "AI Infrastructure",
       icon: "⚙️",
-      skills: ["Git & GitHub", "Arduino", "VS Code", "Linux", "Jira"]
+      skills: ["Hybrid Search", "Cross-Encoder Reranking", "Pinecone", "ChromaDB", "Redis", "Ragas", "TruLens"]
+    },
+    {
+      title: "ML & Data",
+      icon: "📊",
+      skills: ["PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "SQL"]
+    },
+    {
+      title: "Backend & MLOps",
+      icon: "🌐",
+      skills: ["FastAPI", "Node.js", "Docker", "CI/CD", "PostgreSQL", "MongoDB", "DigitalOcean"]
+    },
+    {
+      title: "Language & Frontend",
+      icon: "💻",
+      skills: ["Python", "JavaScript", "Java", "React.js", "Tailwind CSS"]
     }
   ];
 

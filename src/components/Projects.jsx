@@ -7,27 +7,33 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "AI Traffic Analysis",
-      desc: "Computer vision system to detect and count vehicles in real-time using YOLOv8 and OpenCV.",
-      tech: ["Python", "YOLO", "OpenCV"],
+      title: "Production RAG System with Hybrid Retrieval",
+      desc: "Domain-specific 'Ask My Docs' system with BM25 + Vector search, Cross-Encoder Reranking, and citation enforcement for zero hallucinations.",
+      tech: ["Python", "LangChain", "Pinecone", "FastAPI", "Docker"],
       link: "#"
     },
     {
-      title: "Hospital Management",
-      desc: "Full-stack MERN application for managing patient records and doctor appointments.",
-      tech: ["MongoDB", "Express", "React", "Node"],
+      title: "Local SLM Benchmarking & Deployment Suite",
+      desc: "Deployed/benchmarked Llama 3, Mistral, and Phi-3 locally using Ollama to evaluate privacy-first AI. Analyzed inference latency & memory.",
+      tech: ["Python", "Ollama", "Streamlit", "Bash"],
       link: "#"
     },
     {
-      title: "Portfolio V1",
-      desc: "My first portfolio website built with simple HTML, CSS and JavaScript.",
-      tech: ["HTML", "CSS", "JS"],
+      title: "The Exiled Prince – Cybersecurity Game",
+      desc: "Thesis: A gamified digital experience enhancing cybersecurity awareness among university students based on HCI principles.",
+      tech: ["HCI", "Game Design", "Research"],
       link: "#"
     },
     {
-      title: "Chatbot Assistant",
-      desc: "NLP-based chatbot capable of handling customer queries for e-commerce platforms.",
-      tech: ["Python", "NLTK", "Flask"],
+      title: "Hospital Management Portal",
+      desc: "Full-Stack Web App enabling scheduling, role-based access, dashboard analytics, and integrated chatbot support.",
+      tech: ["MERN Stack", "Socket.io", "JWT"],
+      link: "#"
+    },
+    {
+      title: "Campus Living Distance & Academic Outcomes",
+      desc: "Data-driven analysis to examine how commuting distance influences academic performance using statistical modeling.",
+      tech: ["Python", "Pandas", "Matplotlib", "Jupyter"],
       link: "#"
     }
   ];
