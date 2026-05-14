@@ -2,7 +2,7 @@
 
 A modern and responsive personal portfolio website designed to showcase my skills, projects, and professional experience as a Computer Science student and aspiring software developer. This project was built from the ground up using React and Vite, focusing on a clean UI, smooth animations, and a component-based architecture.
 
-###  live Demo
+### Live Demo
 
 :rocket: **Check out the live version:** [**mirza-shafi.netlify.app**](https://mirza-shafi.netlify.app/)
 ---
@@ -25,6 +25,8 @@ This project was built using a modern tech stack:
 | -------------- | ----------------------------------------- |
 | **React** | A JavaScript library for building user interfaces. |
 | **Vite** | A next-generation frontend tooling for fast development. |
+| **Lucide React** | Beautiful and consistent icon set.         |
+| **EmailJS** | Used for sending emails directly from the contact form. |
 | **HTML5/CSS3** | For structuring and styling the website.       |
 | **JavaScript (ES6+)** | For all the interactive logic and DOM manipulation. |
 | **Git & GitHub** | For version control and source code management.    |
