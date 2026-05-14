@@ -46,15 +46,6 @@ const projects = [
     image: "/images/project_erp.png",
     githubUrl: "https://github.com/mirza-shafi/Order-Processing-API-ERP-Module-",
     demoUrl: "https://erp-inventory-api-production.up.railway.app/"
-  },
-  ,{
-    id: 6,
-    title: "demo demo demo dmeo ",
-    description: "dmeo vai.",
-    tags: ["Python", "FastAPI", "REST", "ERP"],
-    image: "/images/project_erp.png",
-    githubUrl: "https://github.com/mirza-shafi/Order-Processing-API-ERP-Module-",
-    demoUrl: "https://erp-inventory-api-production.up.railway.app/"
   }
 ];
 
