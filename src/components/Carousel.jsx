@@ -46,6 +46,15 @@ const projects = [
     image: "/images/project_erp.png",
     githubUrl: "https://github.com/mirza-shafi/Order-Processing-API-ERP-Module-",
     demoUrl: "https://erp-inventory-api-production.up.railway.app/"
+  },
+  ,{
+    id: ,
+    title: "ERP Inventory API",
+    description: "FastAPI-based RESTful API for managing customer orders, stock levels, and simulating full ERP sales workflows.",
+    tags: ["Python", "FastAPI", "REST", "ERP"],
+    image: "/images/project_erp.png",
+    githubUrl: "https://github.com/mirza-shafi/Order-Processing-API-ERP-Module-",
+    demoUrl: "https://erp-inventory-api-production.up.railway.app/"
   }
 ];
 
