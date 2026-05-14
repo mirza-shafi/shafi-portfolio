@@ -45,7 +45,7 @@ const projects = [
     tags: ["Python", "FastAPI", "REST", "ERP"],
     image: "/images/project_erp.png",
     githubUrl: "https://github.com/mirza-shafi/Order-Processing-API-ERP-Module-",
-    demoUrl: "#"
+    demoUrl: "https://erp-inventory-api-production.up.railway.app/"
   }
 ];
 
