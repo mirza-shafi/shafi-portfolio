@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/counter/:path*",
+      "destination": "https://api.counterapi.dev/v1/:path*"
+    }
+  ]
+}

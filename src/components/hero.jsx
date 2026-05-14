@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="profile-card fade-in">
           <div className="profile-header">
             <div className="img-container">
-              <img src="https://via.placeholder.com/150" alt="Profile" className="profile-img" />
+              <img src="/images/shafi-formal.png" alt="Profile" className="profile-img" style={{ objectFit: 'cover' }} />
             </div>
             <h2 className="profile-name">Mirza Shafi</h2>
             <p className="profile-role">AI Engineer</p>
