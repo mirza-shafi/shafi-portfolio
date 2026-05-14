@@ -28,7 +28,7 @@ const Projects = () => {
       title: "Hospital Management Portal",
       desc: "Full-Stack Web App enabling scheduling, role-based access, dashboard analytics, and integrated chatbot support.",
       tech: ["MERN Stack", "Socket.io", "JWT"],
-      link: "#"
+      link: "https://hmp.mirzashafi.com/"
     },
     {
       title: "Campus Living Distance & Academic Outcomes",

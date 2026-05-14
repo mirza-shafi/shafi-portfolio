@@ -30,7 +30,7 @@ const Projects = () => {
           <div className="project-links">
             <a href="https://github.com/mirza-shafi/Hospital_Management_Portal" target="_blank" rel="noopener noreferrer" className="project-btn">Source Code</a>
             {/* Replace with actual demo URL when available */}
-            <a href="https://hospital-portal-demo.netlify.app" target="_blank" rel="noopener noreferrer" className="project-btn">Live Demo</a>
+            <a href="https://hmp.mirzashafi.com/" target="_blank" rel="noopener noreferrer" className="project-btn">Live Demo</a>
           </div>
         </div>
 
