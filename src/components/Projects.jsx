@@ -12,7 +12,7 @@ const projects = [
     title: 'Facebook Lead Automation (Autofy Solution)',
     categories: ['AI Automation'],
     shortDesc: 'Automates 50+ daily Facebook leads directly into the Autofy CRM via n8n, saving hours of manual data entry.',
-    fullDesc: 'An automated lead generation pipeline for Autofy Solutions built entirely on n8n. It listens for incoming leads from Facebook Lead Ads via webhooks and posts them directly into the internal CRM. Currently automating 50+ leads daily, this simple yet powerful solution eliminates manual tracking and saves significant time for the team.',
+    fullDesc: 'I built an automated lead generation pipeline for Autofy Solutions entirely on n8n. It listens for incoming leads from Facebook Lead Ads via webhooks and posts them directly into their internal CRM. Currently automating 50+ leads daily, this simple yet powerful solution eliminates manual tracking and saves significant time for the team.',
     tags: ['n8n', 'Facebook Ads', 'CRM', 'Webhooks', 'Automation'],
     image: 'https://pub-2e228f0de4e14489b5acc58b8a133c05.r2.dev/project%20picture/facebook_lead_automation.png',
     gradient: 'linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)',
