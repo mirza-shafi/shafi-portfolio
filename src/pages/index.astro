@@ -63,7 +63,7 @@ const marqueeItems = [...techs, ...techs];
       <section class="hero-section hidden-animate" id="home">
         <div class="hero-grid">
           <div class="hero-text">
-            <h1 class="hero-title">Hello, <br /> I am Mirza Shafi</h1>
+            <h1 class="hero-title" id="typewriter-title" aria-label="Hello, I am Mirza Shafi"></h1>
             <p class="hero-subtitle">
               Passionate AI Engineer &amp; Backend Developer, building <span class="highlight-text">RAG pipelines</span>, <span class="highlight-text">AI automation workflows</span>, and <span class="highlight-text">LLM-powered applications</span>.
             </p>
@@ -385,9 +385,69 @@ const marqueeItems = [...techs, ...techs];
       );
       document.querySelectorAll('.hidden-animate').forEach(el => observer.observe(el));
     }
+
+    function initTypewriter() {
+      const el = document.getElementById('typewriter-title');
+      if (!el || el.dataset.typed) return;
+      el.dataset.typed = 'true';
+
+      const lines = ['Hello,', 'I am Mirza Shafi'];
+      let lineIdx = 0, charIdx = 0;
+
+      // Add cursor
+      const cursor = document.createElement('span');
+      cursor.className = 'typewriter-cursor';
+      cursor.textContent = '|';
+      el.appendChild(cursor);
+
+      function type() {
+        if (lineIdx >= lines.length) {
+          // Done typing — keep cursor blinking for a bit, then hide
+          setTimeout(() => cursor.classList.add('typewriter-cursor--hide'), 2000);
+          return;
+        }
+
+        const line = lines[lineIdx];
+        if (charIdx === 0 && lineIdx > 0) {
+          el.insertBefore(document.createElement('br'), cursor);
+        }
+
+        if (charIdx < line.length) {
+          const span = document.createElement('span');
+          span.className = 'typewriter-char';
+          span.textContent = line[charIdx];
+          span.style.animationDelay = '0ms';
+          el.insertBefore(span, cursor);
+          charIdx++;
+          setTimeout(type, 70 + Math.random() * 40);
+        } else {
+          lineIdx++;
+          charIdx = 0;
+          setTimeout(type, 300);
+        }
+      }
+
+      // Start typing after hero section fades in
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            heroObserver.disconnect();
+            setTimeout(type, 600);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      const heroSection = document.getElementById('home');
+      if (heroSection) heroObserver.observe(heroSection);
+    }
+
     // Run on first load
     initScrollAnimations();
+    initTypewriter();
     // Also run after any client-side navigation (Astro View Transitions)
-    document.addEventListener('astro:page-load', initScrollAnimations);
+    document.addEventListener('astro:page-load', () => {
+      initScrollAnimations();
+      initTypewriter();
+    });
   </script>
 </Layout>

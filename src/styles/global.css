@@ -66,7 +66,7 @@ ul { list-style: none; }
 .font-bold { font-weight: 700; }
 .font-medium { font-weight: 500; }
 .text-sm { font-size: 0.85rem; }
-.highlight-text { color: var(--text-main); font-weight: 500; }
+.highlight-text { font-weight: 600; }
 .flex-between { display: flex; justify-content: space-between; align-items: center; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 .flex { display: flex; }
@@ -185,6 +185,36 @@ ul { list-style: none; }
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
+  min-height: 7.7rem; /* Prevent layout shift while typing */
+}
+
+/* Typewriter character animation */
+.typewriter-char {
+  display: inline-block;
+  animation: charPop 0.15s ease-out both;
+}
+@keyframes charPop {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.8); filter: blur(2px); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+/* Blinking cursor */
+.typewriter-cursor {
+  display: inline-block;
+  color: #3b82f6;
+  font-weight: 300;
+  animation: cursorBlink 0.7s step-end infinite;
+  margin-left: 2px;
+}
+.typewriter-cursor--hide {
+  animation: cursorFadeOut 0.5s ease forwards;
+}
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+@keyframes cursorFadeOut {
+  to { opacity: 0; }
 }
 .hero-subtitle {
   font-size: 1.15rem;
@@ -1019,9 +1049,206 @@ ul { list-style: none; }
 }
 .footer-title { font-size: 2.2rem; letter-spacing: -0.02em; margin-bottom: 24px; }
 
-/* ANIMATIONS */
-.hidden-animate { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-.show-animate { opacity: 1; transform: translateY(0); }
+/* ═══════════════════════════════════════════
+   ANIMATIONS — Comprehensive System
+═══════════════════════════════════════════ */
+
+/* --- Base scroll-reveal --- */
+.hidden-animate { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.show-animate  { opacity: 1; transform: translateY(0); }
+
+/* --- Hero staggered entry --- */
+.hero-section.show-animate .hero-title {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+.hero-section.show-animate .hero-subtitle {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+.hero-section.show-animate .hero-buttons {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+.hero-section.show-animate .hero-image-wrapper {
+  animation: heroScaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+.hero-section.show-animate .trusted-banner {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroScaleIn {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* --- Glow effect pulse --- */
+.glow-effect {
+  animation: glowPulse 4s ease-in-out infinite alternate;
+}
+@keyframes glowPulse {
+  0%   { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* --- Section headers --- */
+.show-animate .section-header {
+  animation: headerReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+@keyframes headerReveal {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --- About stats pop --- */
+.about-section.show-animate .stat-item:nth-child(1) {
+  animation: statPop 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+.about-section.show-animate .stat-item:nth-child(2) {
+  animation: statPop 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+@keyframes statPop {
+  0%   { opacity: 0; transform: scale(0.5); }
+  70%  { transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* --- Expertise items staggered cascade --- */
+.show-animate .expertise-item:nth-child(1) { animation: slideFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+.show-animate .expertise-item:nth-child(2) { animation: slideFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.show-animate .expertise-item:nth-child(3) { animation: slideFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+.show-animate .expertise-item:nth-child(4) { animation: slideFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateX(-25px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Timeline items alternate slide --- */
+.show-animate .timeline-item:nth-child(1) { animation: timelineSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+.show-animate .timeline-item:nth-child(2) { animation: timelineSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+.show-animate .timeline-item:nth-child(3) { animation: timelineSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+
+@keyframes timelineSlide {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Timeline dot scale-in --- */
+.show-animate .timeline-dot {
+  animation: dotScaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+@keyframes dotScaleIn {
+  from { opacity: 0; transform: scale(0); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Contact cards cascade --- */
+.show-animate .contact-card:nth-child(1) { animation: contactCascade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.show-animate .contact-card:nth-child(2) { animation: contactCascade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+.show-animate .contact-card:nth-child(3) { animation: contactCascade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.show-animate .contact-card:nth-child(4) { animation: contactCascade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+.show-animate .contact-card:nth-child(5) { animation: contactCascade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+.show-animate .contact-info-card { animation: contactCascade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+.show-animate .contact-form-column { animation: formSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+
+@keyframes contactCascade {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes formSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Hover micro-interactions --- */
+.expertise-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.expertise-item:hover {
+  transform: translateY(-3px);
+}
+
+.timeline-content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.contact-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.stat-item {
+  transition: transform 0.3s ease;
+}
+.stat-item:hover {
+  transform: scale(1.05);
+}
+
+/* --- Highlight text shimmer --- */
+.highlight-text {
+  background: linear-gradient(90deg, var(--text-accent, #60a5fa), #a78bfa, var(--text-accent, #60a5fa));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* --- Navbar slide-down on load --- */
+.navbar {
+  animation: navSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes navSlideDown {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Button pulse on hover --- */
+.btn-primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.35);
+}
+.btn-outline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Footer fade-in --- */
+.footer-mini {
+  animation: footerFade 1s ease 0.5s both;
+}
+@keyframes footerFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+/* --- Reduce motion for accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* ═══════════════════════════════════════════
    PROJECTS SECTION — Card Grid + Modal
@@ -1858,15 +2085,16 @@ ul { list-style: none; }
 }
 
 .pricing-btn--primary {
-  background: var(--text-main);
-  color: var(--bg-body);
-  border: 2px solid var(--text-main);
+  background: #3b82f6;
+  color: #fff;
+  border: 2px solid #3b82f6;
 }
 
 .pricing-btn--primary:hover {
-  background: var(--text-muted);
-  border-color: var(--text-muted);
+  background: #2563eb;
+  border-color: #2563eb;
   transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.35);
 }
 
 .pricing-btn--secondary {
