@@ -11,6 +11,7 @@ A modern, high-performance personal portfolio website showcasing my skills, proj
 ## ✨ Features
 
 - **Island Architecture (Astro):** Static HTML is served instantly; React only loads for interactive components (carousel, contact form, theme toggle).
+- **Cloudflare R2 Storage:** All project images and videos are hosted on Cloudflare R2 object storage to ensure lightning-fast asset delivery and zero bandwidth strain on the main hosting server.
 - **Zero JS by default:** Navbar, Hero, Experience, and marquee sections ship as pure HTML — no JavaScript overhead.
 - **Dark / Light Theme:** Persisted in `localStorage` with flash-of-wrong-theme prevention via an inline script.
 - **3D Coverflow Carousel:** Interactive project showcase with smooth 3D perspective animations.
@@ -22,6 +23,21 @@ A modern, high-performance personal portfolio website showcasing my skills, proj
 
 ---
 
+## 🌟 Featured Projects
+
+Here are some of the flagship projects featured in this portfolio, demonstrating expertise across AI, ML, RAG, and Full-Stack Engineering:
+
+- **AskMyDocs:** Production-grade RAG system combining hybrid retrieval, cross-encoder reranking, and Groq Llama-3.3-70B with a Ragas evaluation CI gate.
+- **AutofyBit RAG Chatbot:** Production RAG chatbot utilizing pgvector semantic search and GPT-4o-mini to generate answers strictly grounded in official documentation.
+- **Heart Disease Prediction API:** Production-grade FastAPI service serving a Random Forest classifier with SHAP explanations, Celery/Redis async batching, and Pytest integration.
+- **Virtual Try-On System:** CV pipeline for virtual clothing try-on via text prompts, using Segformer for semantic segmentation and Stable Diffusion Inpainting.
+- **Hospital RAG Assistant:** Patient-facing AI assistant grounded in live hospital data using parent-child RAG with MongoDB Atlas Vector Search and Llama-3.1.
+- **Local SLM Benchmark Suite:** Full-stack privacy-first benchmarking suite for evaluating and comparing small language models (SLMs) on local hardware.
+- **TaskFlow:** Full-stack productivity suite featuring task management, habit tracking, and team workspaces built with FastAPI, React, and MongoDB.
+- **StuRent:** Student rental marketplace for housing and equipment built with Django REST Framework, React, and PostgreSQL.
+
+---
+
 ## 🛠️ Tech Stack
 
 | Technology | Role |
@@ -29,6 +45,7 @@ A modern, high-performance personal portfolio website showcasing my skills, proj
 | **Astro** | Static site framework — renders pages to HTML at build time |
 | **React** | Interactive UI islands (carousel, form, theme toggle, visitor counter) |
 | **Vanilla CSS** | All styling — no utility framework, full custom design system |
+| **Cloudflare R2** | Global object storage for all media assets (images, videos) to reduce server load |
 | **EmailJS** | Contact form email delivery (no backend required) |
 | **CounterAPI** | Visitor view counter |
 | **Vercel** | Hosting & deployment with API proxy rewrites |
