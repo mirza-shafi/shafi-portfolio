@@ -67,21 +67,6 @@ const projects = [
     demoUrl: null,
     featured: true,
   },
-  {
-    id: 1,
-    title: 'AutofyBit',
-    categories: ['AI Automation'],
-    shortDesc: 'WhatsApp & Messenger chatbot with Meta Lead Ads integration for fully automated lead capture, qualification, and follow-up.',
-    fullDesc: 'AutofyBit connects Meta Lead Ads directly to WhatsApp and Messenger, capturing leads the moment they submit a form and instantly opening a personalised conversation. The bot qualifies leads, answers FAQs, and hands off to a human agent when needed — all without manual intervention. Built for freelancers and small businesses who want 24/7 automated client engagement.',
-    tags: ['WhatsApp API', 'Meta Ads', 'Node.js', 'Chatbot', 'Automation', 'Lead Gen'],
-    image: null,
-    gradient: 'linear-gradient(135deg, #0a1628 0%, #0d2137 50%, #0a3d2e 100%)',
-    icon: '🤖',
-    videoUrl: null,
-    githubUrl: 'https://github.com/mirza-shafi/AutofyBit',
-    demoUrl: null,
-    featured: true,
-  },
 
   /* ── 2. RAG & AI Applications ── */
   {
