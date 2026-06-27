@@ -3,22 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import ThemeToggle from '../components/ThemeToggle.jsx';
 import VisitorCounter from '../components/VisitorCounter.jsx';
 import Carousel from '../components/Carousel.jsx';
+import Projects from '../components/Projects.jsx';
+import ServicesPricing from '../components/ServicesPricing.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import '../styles/global.css';
 
 const techs = [
   { name: 'Python',      icon: 'https://cdn.simpleicons.org/python/3776AB' },
+  { name: 'PyTorch',     icon: 'https://cdn.simpleicons.org/pytorch/EE4C2C' },
   { name: 'FastAPI',     icon: 'https://cdn.simpleicons.org/fastapi/009688' },
   { name: 'LangChain',   icon: 'https://cdn.simpleicons.org/langchain/1C3C3C' },
-  { name: 'Docker',      icon: 'https://cdn.simpleicons.org/docker/2496ED' },
-  { name: 'React',       icon: 'https://cdn.simpleicons.org/react/61DAFB' },
-  { name: 'Node.js',     icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
-  { name: 'PostgreSQL',  icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
-  { name: 'MongoDB',     icon: 'https://cdn.simpleicons.org/mongodb/47A248' },
   { name: 'OpenAI',      icon: 'https://cdn.simpleicons.org/openai/74AA9C' },
   { name: 'HuggingFace', icon: 'https://cdn.simpleicons.org/huggingface/FFD21E' },
   { name: 'Ollama',      icon: 'https://cdn.simpleicons.org/ollama/ffffff' },
-  { name: 'Streamlit',   icon: 'https://cdn.simpleicons.org/streamlit/FF4B4B' },
+  { name: 'Pinecone',    icon: 'https://cdn.simpleicons.org/pinecone/ffffff' },
+  { name: 'n8n',         icon: 'https://cdn.simpleicons.org/n8n/FF6D5A' },
+  { name: 'React',       icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+  { name: 'Next.js',     icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff' },
+  { name: 'Node.js',     icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+  { name: 'PostgreSQL',  icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+  { name: 'Docker',      icon: 'https://cdn.simpleicons.org/docker/2496ED' },
 ];
 // Duplicate for seamless infinite marquee
 const marqueeItems = [...techs, ...techs];
@@ -41,6 +45,7 @@ const marqueeItems = [...techs, ...techs];
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions flex gap-4 items-center">
@@ -60,10 +65,7 @@ const marqueeItems = [...techs, ...techs];
           <div class="hero-text">
             <h1 class="hero-title">Hello, <br /> I am Mirza Shafi</h1>
             <p class="hero-subtitle">
-              Passionate AI Engineer &amp; Full-Stack Developer, building
-              <span class="highlight-text">intelligent workflows</span>,
-              <span class="highlight-text">LLM integrations</span>, and
-              <span class="highlight-text">SaaS solutions</span>.
+              Passionate AI Engineer &amp; Backend Developer, building <span class="highlight-text">RAG pipelines</span>, <span class="highlight-text">AI automation workflows</span>, and <span class="highlight-text">LLM-powered applications</span>.
             </p>
             <div class="hero-buttons">
               <a href="/images/MIRZA%20MD%20SHAFI%20UDDIN_CV_AI_Engineer.pdf" target="_blank" rel="noreferrer" class="btn-outline">
@@ -96,6 +98,31 @@ const marqueeItems = [...techs, ...techs];
         </div>
       </section>
 
+      {/* ── ABOUT SECTION ── */}
+      <section class="section about-section hidden-animate" id="about">
+        <div class="about-container">
+          <p class="about-text">
+            AI Engineer & Backend Developer with 1+ year of experience building and
+            shipping LLM-powered applications, multi-agent systems, and production RAG
+            pipelines with hybrid search and cross-encoder reranking for high retrieval
+            accuracy. Specialized in end-to-end AI product development — from agentic
+            workflow automation (n8n, LangGraph, CrewAI) to scalable backend deployment
+            (FastAPI, Docker, vector databases) — consistently turning AI research into
+            reliable, production-ready business tools.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">1+</span>
+              <span class="stat-label">Years of experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Clients served</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── EXPERIENCE SECTION ── */}
       <section class="section hidden-animate" id="experience">
         <div class="section-header text-center">
@@ -112,36 +139,36 @@ const marqueeItems = [...techs, ...techs];
               <div class="expertise-item">
                 <h4 class="expertise-title">AI Agents &amp; LLM Integrations</h4>
                 <ul class="expertise-bullets">
-                  <li>• Engineered stateful AI agents for workflow automation.</li>
-                  <li>• Refined prompt architectures and conversational memory.</li>
-                  <li>• Experience with Gemini, OpenAI, and LangChain frameworks.</li>
+                  <li>• Built hybrid-search RAG pipelines (BM25 + pgvector) with cross-encoder reranking for high-accuracy retrieval</li>
+                  <li>• Engineered stateful AI agents with tool-calling, conversational memory, and multi-step reasoning</li>
+                  <li>• Production experience with Groq Llama 3.3, Gemini, OpenAI, and LangChain/LangGraph</li>
                 </ul>
               </div>
 
               <div class="expertise-item">
                 <h4 class="expertise-title">Backend &amp; API Development</h4>
                 <ul class="expertise-bullets">
-                  <li>• Developed scalable APIs and Webhooks using FastAPI and Node.js.</li>
-                  <li>• Built robust backend systems for high-performance applications.</li>
-                  <li>• Database design and optimization across PostgreSQL and NoSQL.</li>
+                  <li>• Developed scalable APIs and webhooks using FastAPI and Node.js, deployed on Dockerized VPS infrastructure</li>
+                  <li>• Built async pipelines with Celery and Redis for high-throughput processing</li>
+                  <li>• Database design across PostgreSQL (pgvector) and MongoDB, optimized for production load</li>
+                </ul>
+              </div>
+
+              <div class="expertise-item">
+                <h4 class="expertise-title">AI Automation &amp; Integrations</h4>
+                <ul class="expertise-bullets">
+                  <li>• Built WhatsApp &amp; Messenger bots on Meta Cloud API with menu-first logic and LLM fallback</li>
+                  <li>• Designed n8n workflows for lead capture, CRM sync, and Facebook Lead Ads integration</li>
+                  <li>• Used Redis for webhook dedup/debounce and PostgreSQL for session tracking</li>
                 </ul>
               </div>
 
               <div class="expertise-item">
                 <h4 class="expertise-title">Full-Stack Development</h4>
                 <ul class="expertise-bullets">
-                  <li>• Created intuitive and dynamic user interfaces using React.</li>
-                  <li>• Seamlessly integrated frontend with backend and AI services.</li>
-                  <li>• Maintained clean code standards and scalable architectures.</li>
-                </ul>
-              </div>
-
-              <div class="expertise-item">
-                <h4 class="expertise-title">Workflow &amp; Automation</h4>
-                <ul class="expertise-bullets">
-                  <li>• Designed automated solutions for complex technical workflows.</li>
-                  <li>• Leveraged tool-calling and APIs to streamline operations.</li>
-                  <li>• Tackled technical challenges with innovative software solutions.</li>
+                  <li>• Built React/FastAPI applications end-to-end, with AI services integrated directly into the product</li>
+                  <li>• Shipped MERN-stack systems with role-based access and RAG-powered assistants</li>
+                  <li>• Maintained clean, scalable architecture across frontend, backend, and AI layers</li>
                 </ul>
               </div>
 
@@ -153,6 +180,28 @@ const marqueeItems = [...techs, ...techs];
             <h3 class="column-title">Professional Experience</h3>
             <div class="timeline-container">
 
+              {/* ── Current position — Autofy Solution ── */}
+              <div class="timeline-item">
+                <div class="timeline-dot timeline-dot--active"></div>
+                <div class="timeline-content card-glass">
+                  <div class="flex-between flex-wrap gap-2">
+                    <h3 class="job-title">AI Engineer &amp; Backend Developer</h3>
+                    <span class="job-date font-mono text-muted text-sm badge-small">Mar 2026 – Present</span>
+                  </div>
+                  <div class="company-row">
+                    <p class="company-text text-accent font-medium mt-1">Autofy Solution</p>
+                    <span class="current-badge">● Current</span>
+                    <span class="company-location text-muted text-sm">Dhaka, Bangladesh</span>
+                  </div>
+                  <ul class="job-bullets">
+                    <li><strong>RAG Chatbot:</strong> Designed and deployed a production-grade RAG-based chatbot with hybrid retrieval pipelines and a vector database, grounding all responses in company-specific knowledge to deliver hallucination-free interactions.</li>
+                    <li><strong>AI Agent Integration:</strong> Integrated an autonomous AI agent fallback into live support workflows using n8n — when human agents are unavailable, the AI agent handles queries end-to-end for 24/7 coverage.</li>
+                    <li><strong>Lead &amp; Channel Automation:</strong> Built Facebook Lead capture and WhatsApp automation pipelines with n8n, incorporating rigorous API testing to ensure robust CRM routing and reduce response times by 90%.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* ── Mevrik ── */}
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card-glass">
@@ -160,30 +209,19 @@ const marqueeItems = [...techs, ...techs];
                     <h3 class="job-title">AI Agent &amp; LLM Intern</h3>
                     <span class="job-date font-mono text-muted text-sm badge-small">Dec 2025 – Feb 2026</span>
                   </div>
-                  <p class="company-text text-accent font-medium mb-3 mt-1">Mevrik</p>
-                  <ul class="job-bullets">
-                    <li>Engineered and deployed AI agents to automate CX workflows using stateful logic and tool-calling.</li>
-                    <li>Refined prompt architectures and conversational memory, increasing model accuracy.</li>
-                    <li>Integrated Gemini capabilities into a production SaaS environment using FastAPI and Webhooks.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content card-glass">
-                  <div class="flex-between flex-wrap gap-2">
-                    <h3 class="job-title">Junior Engagement Officer</h3>
-                    <span class="job-date font-mono text-muted text-sm badge-small">Jun 2024 – Oct 2024</span>
+                  <div class="company-row">
+                    <p class="company-text text-accent font-medium mt-1">Mevrik</p>
+                    <span class="company-location text-muted text-sm">Dhaka, Bangladesh</span>
                   </div>
-                  <p class="company-text text-accent font-medium mb-3 mt-1">X Integrated Marketing Agency</p>
                   <ul class="job-bullets">
-                    <li>Assisted in planning and executing digital marketing campaigns to increase audience engagement.</li>
-                    <li>Coordinated with creative and technical teams to ensure smooth campaign delivery and improved customer interactions.</li>
+                    <li><strong>Autonomous Agents:</strong> Designed, developed, and deployed 5+ autonomous AI agents and agentic workflows to automate CX pipelines, implementing stateful logic and tool-calling to eliminate 100% manual intervention.</li>
+                    <li><strong>LLM Optimisation:</strong> Refined prompt architectures and conversational memory frameworks, reducing hallucination rate by ~40% and cutting API token cost by 25% through context compression.</li>
+                    <li><strong>AI Voice Agents:</strong> Developed real-time AI voice agents integrated with Twilio and WebSockets, achieving sub-500ms end-to-end response latency for live conversational interactions.</li>
                   </ul>
                 </div>
               </div>
 
+              {/* ── Robotics Club ── */}
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card-glass">
@@ -206,11 +244,12 @@ const marqueeItems = [...techs, ...techs];
 
       {/* ── PROJECTS SECTION ── */}
       <section class="section hidden-animate" id="projects">
-        <div class="section-header text-center">
-          <p class="badge font-mono text-accent">Real-world Solutions</p>
-          <h2 class="section-title">Featured Projects</h2>
-        </div>
-        <Carousel client:visible />
+        <Projects client:visible />
+      </section>
+
+      {/* ── SERVICES & PRICING SECTION ── */}
+      <section class="section hidden-animate" id="services">
+        <ServicesPricing client:visible />
       </section>
 
     </main>
