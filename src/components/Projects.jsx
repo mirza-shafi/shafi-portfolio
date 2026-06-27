@@ -54,7 +54,7 @@ const projects = [
   },
   {
     id: 104,
-    title: 'Autofy CRM & Omnichannel AI Agent',
+    title: 'CRM & Omnichannel AI Agent (Autofy Solution)',
     categories: ['AI Automation', 'Full-Stack'],
     shortDesc: 'Custom React CRM integrating WhatsApp & Messenger, featuring a trained AI agent that takes over conversations when staff are away.',
     fullDesc: 'A massive, full-stack CRM platform developed for Autofy Solutions. The frontend is built in React, providing a unified inbox for staff to chat with customers across WhatsApp and Messenger. When human agents are unavailable, a custom-trained AI agent seamlessly takes over the conversation, providing intelligent, context-aware automatic replies based on company data to ensure 24/7 customer engagement.',
@@ -177,7 +177,7 @@ const projects = [
     shortDesc: 'MERN-based Kanban task management app with drag-and-drop, team collaboration, and real-time priority tagging.',
     fullDesc: 'A full-featured Kanban board built with TypeScript and the MERN stack. Supports drag-and-drop task management, multi-member team workspaces, priority labelling, and due-date tracking. Real-time updates via Socket.io ensure all team members see board changes instantly without refreshing.',
     tags: ['TypeScript', 'React', 'Node.js', 'MongoDB', 'Socket.io', 'MERN'],
-    image: '/images/project_taskflow.png',
+    image: 'https://pub-2e228f0de4e14489b5acc58b8a133c05.r2.dev/project%20picture/taskflow.png',
     videoUrl: null,
     githubUrl: 'https://github.com/mirza-shafi/TaskFlow',
     demoUrl: 'https://task-flow.mirzashafi.com/',
