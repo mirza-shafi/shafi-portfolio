@@ -55,10 +55,10 @@ const projects = [
   {
     id: 104,
     title: 'CRM & Omnichannel AI Agent (Autofy Solution)',
-    categories: ['AI Automation', 'Full-Stack'],
+    categories: ['AI Automation'],
     shortDesc: 'Custom React CRM integrating WhatsApp & Messenger, featuring a trained AI agent that takes over conversations when staff are away.',
-    fullDesc: 'A massive, full-stack CRM platform developed for Autofy Solutions. The frontend is built in React, providing a unified inbox for staff to chat with customers across WhatsApp and Messenger. When human agents are unavailable, a custom-trained AI agent seamlessly takes over the conversation, providing intelligent, context-aware automatic replies based on company data to ensure 24/7 customer engagement.',
-    tags: ['React', 'WhatsApp API', 'Messenger API', 'AI Agent', 'CRM', 'Full-Stack'],
+    fullDesc: 'Developed a comprehensive omnichannel CRM platform for Autofy Solutions, featuring a React-based unified inbox for staff to seamlessly communicate with customers across WhatsApp and Messenger. The backend routing and automation logic are orchestrated using robust n8n workflows. To ensure 24/7 engagement, a custom-trained AI agent automatically takes over conversations when human agents are unavailable, providing context-aware replies based on company data. The system utilizes PostgreSQL for storing chat histories, Redis for real-time performance and session management, and Cloudflare R2 for secure storage of media files and documents.',
+    tags: ['React', 'n8n', 'PostgreSQL', 'Redis', 'Cloudflare R2', 'WhatsApp API', 'Messenger API', 'Custom AI Agent'],
     image: '/images/project_autofy_crm.png',
     gradient: null,
     icon: null,
