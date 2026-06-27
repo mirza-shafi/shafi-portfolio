@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { createPortal } from 'react-dom';
 
 /* ─────────────────────────────────────────
    PROJECT DATA
@@ -6,6 +7,66 @@ import { useState, useEffect, useCallback } from 'react';
 const projects = [
 
   /* ── 1. AI Automation & Chatbots ── */
+  {
+    id: 101,
+    title: 'Autofy Lead Automation',
+    categories: ['AI Automation'],
+    shortDesc: 'Automated lead capture pipeline syncing Facebook Lead Ads directly to Autofy Solutions CRM via n8n.',
+    fullDesc: 'An automated lead generation pipeline for Autofy Solutions built entirely on n8n. It listens for incoming leads from Facebook Lead Ads via webhooks, processes the data, and posts it directly into the company\'s internal CRM. This zero-touch workflow eliminates manual data entry and ensures immediate follow-up on fresh leads.',
+    tags: ['n8n', 'Facebook Ads', 'CRM', 'Webhooks', 'Automation'],
+    image: null,
+    gradient: 'linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)',
+    icon: '⚡',
+    videoUrl: null,
+    githubUrl: null,
+    demoUrl: null,
+    featured: true,
+  },
+  {
+    id: 102,
+    title: 'Personal AI News Agent',
+    categories: ['AI Automation'],
+    shortDesc: 'Custom n8n agent that fetches AI news daily, summarizes it using Groq LLM, and emails a personalized newsletter at 7 AM.',
+    fullDesc: 'A personal automation agent acting as an intelligent news aggregator. Triggered daily at 7 AM via n8n, it fetches the latest AI news and tools from across the web. It uses a Groq-powered Chat Model to deduplicate and summarize the articles, generates a clean HTML newsletter, and automatically distributes it via Gmail. The system also manages subscriber lists natively via Google Sheets.',
+    tags: ['n8n', 'Groq', 'LLM', 'Gmail API', 'Google Sheets', 'Automation'],
+    image: '/images/project_ai_news.png',
+    gradient: null,
+    icon: null,
+    videoUrl: null,
+    githubUrl: null,
+    demoUrl: null,
+    featured: true,
+  },
+  {
+    id: 103,
+    title: 'AI Article Agent',
+    categories: ['AI Automation', 'AI/ML Engineering'],
+    shortDesc: 'FastAPI-driven workflow that scrapes web articles, summarizes them via Gemini AI, logs to Google Sheets, and emails the report.',
+    fullDesc: 'An end-to-end AI article summarization pipeline. It receives URLs via a custom FastAPI webhook, scrapes the raw article text, and passes it to Google Gemini for summarization and insight extraction. The processed data is automatically appended to a Google Sheet database for archiving and simultaneously emailed directly to the user as a formatted report.',
+    tags: ['FastAPI', 'Gemini AI', 'Web Scraping', 'Google Sheets', 'Gmail API', 'Python'],
+    image: '/images/project_ai_article.png',
+    gradient: null,
+    icon: null,
+    videoUrl: null,
+    githubUrl: null,
+    demoUrl: null,
+    featured: true,
+  },
+  {
+    id: 104,
+    title: 'Autofy CRM & Omnichannel AI Agent',
+    categories: ['AI Automation', 'Full-Stack'],
+    shortDesc: 'Custom React CRM integrating WhatsApp & Messenger, featuring a trained AI agent that takes over conversations when staff are away.',
+    fullDesc: 'A massive, full-stack CRM platform developed for Autofy Solutions. The frontend is built in React, providing a unified inbox for staff to chat with customers across WhatsApp and Messenger. When human agents are unavailable, a custom-trained AI agent seamlessly takes over the conversation, providing intelligent, context-aware automatic replies based on company data to ensure 24/7 customer engagement.',
+    tags: ['React', 'WhatsApp API', 'Messenger API', 'AI Agent', 'CRM', 'Full-Stack'],
+    image: '/images/project_autofy_crm.png',
+    gradient: null,
+    icon: null,
+    videoUrl: null,
+    githubUrl: null,
+    demoUrl: null,
+    featured: true,
+  },
   {
     id: 1,
     title: 'AutofyBit',
@@ -24,14 +85,29 @@ const projects = [
 
   /* ── 2. RAG & AI Applications ── */
   {
+    id: 105,
+    title: 'AutofyBit RAG Chatbot',
+    categories: ['RAG & AI Apps'],
+    shortDesc: 'Advanced RAG-powered chatbot built for AutofyBit to handle complex customer queries with context-aware responses.',
+    fullDesc: 'A highly capable AI chatbot built specifically for AutofyBit, leveraging advanced RAG (Retrieval-Augmented Generation) architecture. It securely indexes company knowledge bases and utilizes semantic search to fetch relevant context before generating a response. This ensures the bot provides accurate, hallucination-free answers to complex customer support questions.',
+    tags: ['RAG', 'LLM', 'Chatbot', 'Semantic Search', 'Vector DB', 'AI Agent'],
+    image: null,
+    gradient: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+    icon: '💬',
+    videoUrl: null,
+    githubUrl: null,
+    demoUrl: null,
+    featured: true,
+  },
+  {
     id: 2,
     title: 'AskMyDocs',
     categories: ['RAG & AI Apps'],
     shortDesc: 'Enterprise-grade RAG system with Hybrid Search (BM25 + Vector) and Cross-Encoder reranking for accurate, citation-backed answers.',
     fullDesc: 'A production-ready Retrieval-Augmented Generation system combining BM25 keyword search with dense vector similarity for hybrid retrieval. Cross-Encoder reranking ensures the most relevant documents surface first, and every answer cites the exact source chunk. Supports PDF, DOCX, and TXT ingestion with pluggable LLM backends (OpenAI, Ollama).',
     tags: ['RAG', 'LangChain', 'FastAPI', 'Vector DB', 'OpenAI', 'Python'],
-    image: '/images/project_askmydocs.png',
-    videoUrl: null,
+    image: 'https://pub-2e228f0de4e14489b5acc58b8a133c05.r2.dev/project%20picture/askmydocs.png',
+    videoUrl: 'https://pub-2e228f0de4e14489b5acc58b8a133c05.r2.dev/project%20video/askmydocs.mp4',
     githubUrl: 'https://github.com/mirza-shafi/AskMyDocs',
     demoUrl: 'https://askmydocs.mirzashafi.com/',
     featured: true,
@@ -43,8 +119,8 @@ const projects = [
     shortDesc: 'Full-stack MERN app with an AI RAG assistant module, blood bank management, and real-time appointment scheduling.',
     fullDesc: 'A comprehensive hospital management system built on the MERN stack. The embedded RAG assistant answers clinical queries from uploaded medical documents. Additional features include real-time appointment scheduling via Socket.io, blood bank inventory tracking, and role-based access for doctors, nurses, admins, and patients.',
     tags: ['MERN', 'RAG', 'Socket.io', 'AI', 'MongoDB', 'React'],
-    image: '/images/project_hospital.png',
-    videoUrl: null,
+    image: 'https://pub-2e228f0de4e14489b5acc58b8a133c05.r2.dev/project%20picture/hmp_rag_chatbot.png',
+    videoUrl: 'https://pub-2e228f0de4e14489b5acc58b8a133c05.r2.dev/project%20video/hmp_rag_chatbot.mp4',
     githubUrl: 'https://github.com/mirza-shafi/Hospital_Management_Portal',
     demoUrl: 'https://hmp.mirzashafi.com/',
     featured: true,
@@ -175,11 +251,31 @@ const ChevronUp = () => (
 /* ─────────────────────────────────────────
    CARD THUMBNAIL — image or gradient placeholder
 ───────────────────────────────────────── */
-function CardThumb({ project }) {
+function CardThumb({ project, isHovered }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (isHovered && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    } else if (!isHovered && videoRef.current) {
+      videoRef.current.pause();
+    }
+  }, [isHovered]);
+
   if (project.image) {
     return (
       <div className="proj-thumb">
         <img src={project.image} alt={project.title} className="proj-thumb-img" loading="lazy" />
+        {project.videoUrl && (
+          <video 
+            ref={videoRef}
+            src={project.videoUrl}
+            className={`proj-thumb-video ${isHovered ? 'playing' : ''}`}
+            muted 
+            loop 
+            playsInline
+          />
+        )}
         {project.videoUrl && (
           <div className="proj-play-badge">
             <svg width="32" height="32" fill="rgba(255,255,255,0.9)" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
@@ -209,13 +305,18 @@ function CardThumb({ project }) {
    PROJECT CARD
 ───────────────────────────────────────── */
 function ProjectCard({ project, onClick }) {
+  const [isHovered, setIsHovered] = useState(false);
   const visibleTags = project.tags.slice(0, VISIBLE_TAGS);
   const extraCount = project.tags.length - VISIBLE_TAGS;
 
   return (
-    <div className="proj-card" onClick={() => onClick(project)} role="button" tabIndex={0}
+    <div className="proj-card" 
+      onClick={() => onClick(project)} 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      role="button" tabIndex={0}
       onKeyDown={e => e.key === 'Enter' && onClick(project)}>
-      <CardThumb project={project} />
+      <CardThumb project={project} isHovered={isHovered} />
       <div className="proj-info">
         <h3 className="proj-title">{project.title}</h3>
         <p className="proj-desc">{project.shortDesc}</p>
@@ -389,7 +490,7 @@ export default function Projects() {
         </div>
       )}
 
-      {selected && <ProjectModal project={selected} onClose={close} />}
+      {selected && typeof document !== 'undefined' && createPortal(<ProjectModal project={selected} onClose={close} />, document.body)}
     </div>
   );
 }
