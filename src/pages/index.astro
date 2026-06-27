@@ -63,7 +63,7 @@ const marqueeItems = [...techs, ...techs];
       <section class="hero-section hidden-animate" id="home">
         <div class="hero-grid">
           <div class="hero-text">
-            <h1 class="hero-title" id="typewriter-title" aria-label="Hello, I am Mirza Shafi"></h1>
+            <h1 class="hero-title" id="typewriter-title" aria-label="Hello, I am MIRZA SHAFI"></h1>
             <p class="hero-subtitle">
               Passionate AI Engineer &amp; Backend Developer, building <span class="highlight-text">RAG pipelines</span>, <span class="highlight-text">AI automation workflows</span>, and <span class="highlight-text">LLM-powered applications</span>.
             </p>
@@ -391,7 +391,7 @@ const marqueeItems = [...techs, ...techs];
       if (!el || el.dataset.typed) return;
       el.dataset.typed = 'true';
 
-      const lines = ['Hello,', 'I am Mirza Shafi'];
+      const lines = ['Hello,', 'I am MIRZA SHAFI'];
       let lineIdx = 0, charIdx = 0;
 
       // Add cursor
@@ -413,11 +413,17 @@ const marqueeItems = [...techs, ...techs];
         }
 
         if (charIdx < line.length) {
-          const span = document.createElement('span');
-          span.className = 'typewriter-char';
-          span.textContent = line[charIdx];
-          span.style.animationDelay = '0ms';
-          el.insertBefore(span, cursor);
+          const char = line[charIdx];
+          if (char === ' ') {
+            // Insert a real space that won't collapse
+            const spaceNode = document.createTextNode('\u00A0');
+            el.insertBefore(spaceNode, cursor);
+          } else {
+            const span = document.createElement('span');
+            span.className = 'typewriter-char';
+            span.textContent = char;
+            el.insertBefore(span, cursor);
+          }
           charIdx++;
           setTimeout(type, 70 + Math.random() * 40);
         } else {
