@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
-import '../index.css';
+// CSS is globally imported via Layout.astro — no local import needed
 
 const projects = [
   {
